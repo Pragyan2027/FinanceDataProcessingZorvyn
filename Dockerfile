@@ -1,9 +1,8 @@
-# Use Java 17
-FROM openjdk:17
+FROM eclipse-temurin:17-jdk-jammy
 
-# Copy jar file
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 
-# Run the app
+EXPOSE 8081
+
 ENTRYPOINT ["java","-jar","/app.jar"]
