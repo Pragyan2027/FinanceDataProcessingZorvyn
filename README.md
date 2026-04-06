@@ -14,7 +14,7 @@ Controller → Service → Repository → Database
 
 ###  Layers:
 
-- ### Controller Layer
+ ### Controller Layer
   Handles HTTP requests
   
 - **UserController**  
@@ -77,7 +77,7 @@ Controller → Service → Repository → Database
 
 ---
 
-### DTO Layer
+ ### DTO Layer
 Data transfer between client and server
 - **LoginRequestDTO**  
   Accepts user login credentials (email & password).
@@ -102,7 +102,7 @@ Data transfer between client and server
 
 ---
 
-### Mapper
+ ### Mapper
 DTO ↔ Entity Conversion)
 
 - **UserMapper**  
