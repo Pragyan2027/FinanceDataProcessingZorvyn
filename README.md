@@ -17,7 +17,7 @@ Controller → Service → Repository → Database
 - ### Controller Layer
   Handles HTTP requests
   
-  - **UserController**  
+- **UserController**  
   Handles user-related APIs such as creating users, updating budget, and fetching user details.
 
 - **RecordController**  
@@ -63,16 +63,54 @@ Controller → Service → Repository → Database
 - **RoleRepository**  
   Fetches and manages user roles (ADMIN, ANALYST, VIEWER).
 
-- **Security Layer**
-  - JWT authentication & authorization
-  - JwtFilter, JwtUtil, SecurityConfig
+  ### Security Layer
+   JWT authentication & authorization
+  
+- **JwtUtil**  
+  Generates JWT tokens and validates them.
 
-- **DTO Layer**
-  - Data transfer between client and server
-  - LoginRequestDTO, DashboardResponseDTO , LoginResponseDTO , RecordDTO , UserRequestDTO , UserResponseDTO , BudgetDTO
+- **JwtFilter**  
+  Intercepts incoming requests, extracts JWT token, and sets authentication context.
 
-- **Mapper**
-- RecordMapper , UserMapper
+- **SecurityConfig**  
+  Configures Spring Security, defines role-based access, and registers JWT filter.
+
+---
+
+### DTO Layer
+Data transfer between client and server
+- **LoginRequestDTO**  
+  Accepts user login credentials (email & password).
+
+- **LoginResponseDTO**  
+  Returns JWT token after successful authentication.
+
+- **UserRequestDTO**  
+  Used for creating or updating user details.
+
+- **UserResponseDTO**  
+  Sends user information to client without exposing sensitive data.
+
+- **RecordDTO**  
+  Transfers transaction details between client and server.
+
+- **DashboardResponseDTO**  
+  Contains dashboard data such as income, expenses, balance, and warnings.
+
+- **BudgetDTO**  
+  Used to set or update the user’s monthly budget.
+
+---
+
+### Mapper
+DTO ↔ Entity Conversion)
+
+- **UserMapper**  
+  Converts User entity to UserDTO and vice versa.
+
+- **RecordMapper**  
+  Converts Record entity to RecordDTO and vice versa.
+
 ---
 
 ##  Tech Stack
