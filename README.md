@@ -188,4 +188,13 @@ DTO ↔ Entity Conversion)
 - GET http://localhost:8081/dashboard/summary (Income , TotalExpense , NetBalance display)
 - GET http://localhost:8081/records/export (csv file generation)
 ---
+##  Screenshots
 
+###  Postman API Testing
+![Postman](screenshots/postman1.png)
+![Postman](screenshots/postman2.png)
+
+###  Live Application
+![Live](screenshots/live1.png)
+![Live](screenshots/live2.png)
+![Live](screenshots/live3.png)
