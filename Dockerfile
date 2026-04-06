@@ -1,5 +1,5 @@
 # Use Java 17
-FROM openjdk:17-jdk-slim
+FROM openjdk:17
 
 # Copy jar file
 ARG JAR_FILE=target/*.jar
