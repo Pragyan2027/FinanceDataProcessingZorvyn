@@ -178,4 +178,12 @@ DTO ↔ Entity Conversion)
 6. Response sent back to client
 
 ---
-
+### API Flow
+- POST http://localhost:8081/auth/login (Getting JWT token )
+- POST http://localhost:8081/users (For User creation)
+- GET http://localhost:8081/users (For User Information)
+- POST http://localhost:8081/records (For records input)
+- GET http://localhost:8081/records (Income display)
+- PUT http://localhost:8081/users/4/budget (Set Budget)
+- GET http://localhost:8081/dashboard/summary (Income , TotalExpense , NetBalance display)
+- GET http://localhost:8081/records/export (csv file generation)
