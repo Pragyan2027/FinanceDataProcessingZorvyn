@@ -63,8 +63,10 @@ Controller → Service → Repository → Database
 - **RoleRepository**  
   Fetches and manages user roles (ADMIN, ANALYST, VIEWER).
 
-  ### Security Layer
-   JWT authentication & authorization
+---
+
+ ### Security Layer
+  JWT authentication & authorization
   
 - **JwtUtil**  
   Generates JWT tokens and validates them.
