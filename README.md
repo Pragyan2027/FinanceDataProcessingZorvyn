@@ -15,7 +15,7 @@ Controller → Service → Repository → Database
 ###  Layers:
 
 - ### Controller Layer
-  - Handles HTTP requests
+  Handles HTTP requests
   
   - **UserController**  
   Handles user-related APIs such as creating users, updating budget, and fetching user details.
@@ -28,14 +28,40 @@ Controller → Service → Repository → Database
 
 - **AuthController**  
   Handles authentication by validating user credentials and generating JWT tokens.
+  
+---
 
-- **Service Layer**
-  - Contains business logic
-  - Example: UserService, DashboardService , RecordService , AuthService , CustomUserDetailsService
+  ### Service Layer
+  Contains business logic
+ 
+  - **UserService**  
+  Contains logic for user creation, assigning roles, and managing budget.
 
-- **Repository Layer**
-  - Handles database operations using JPA
-  - Example: UserRepository, RecordRepository , RoleRepository
+- **RecordService**  
+  Processes transaction-related logic such as saving income/expense records and validations.
+
+- **DashboardService**  
+  Calculates financial summaries including total income, expenses, balance, and budget warnings.
+
+- **AuthService**  
+  Authenticates users and generates JWT tokens after successful login.
+
+- **CustomUserDetailsService**  
+  Loads user details from the database for Spring Security authentication.
+
+  ---
+  
+  ### Repository Layer
+  Handles database operations using JPA
+  
+  - **UserRepository**  
+  Handles CRUD operations for users.
+
+- **RecordRepository**  
+  Manages database operations for transaction records.
+
+- **RoleRepository**  
+  Fetches and manages user roles (ADMIN, ANALYST, VIEWER).
 
 - **Security Layer**
   - JWT authentication & authorization
