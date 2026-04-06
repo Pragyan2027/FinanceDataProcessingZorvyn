@@ -52,7 +52,7 @@ public class RecordController {
         PrintWriter writer = response.getWriter();
 
         writer.println("ID,Type,Amount,Category,Date");
-        
+
         for (FinanceRecord r : records) {
             writer.println(r.getId() + "," +
                     r.getType() + "," +
