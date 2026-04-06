@@ -49,7 +49,7 @@ Controller → Service → Repository → Database
 - **CustomUserDetailsService**  
   Loads user details from the database for Spring Security authentication.
 
-  ---
+---
   
 ### Repository Layer
  Handles database operations using JPA
