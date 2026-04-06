@@ -51,8 +51,8 @@ Controller → Service → Repository → Database
 
   ---
   
-  ### Repository Layer
-  Handles database operations using JPA
+### Repository Layer
+ Handles database operations using JPA
   
   - **UserRepository**  
   Handles CRUD operations for users.
